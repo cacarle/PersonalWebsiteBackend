@@ -1,0 +1,97 @@
+
+
+.banner-align-top {
+    padding:0;
+}
+
+.banner-background {
+    text-align:center;
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    overflow:hidden;
+}
+
+#banner-size {
+    height:100vh;
+}
+
+.banner-title {
+    position: relative;
+    font-family: "Gujarati Sangam MN";
+    font-weight: bold;
+    font-size:67px;
+    color: black;
+    bottom: -880px;
+    -webkit-text-stroke: 1px white;
+}
+
+h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+body {
+    color: white;
+    background-color: #000000;
+    font-size: 1.25em;
+    line-height: 0.
+}
+
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px 15px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-home {
+    background: #ffffff;
+    color: black;
+}
+
+.fa-envelope-o {
+    background: #ffffff;
+    color: gray;
+}
+
+.fa-github-alt {
+    background: #333333;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+#crypto {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#socials {
+    margin: 0 auto;
+}
+
+p.p1 {
+    font-size: 24px;
+}
