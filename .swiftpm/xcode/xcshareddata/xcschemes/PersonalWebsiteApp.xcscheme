@@ -74,7 +74,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/cacarle/Google Drive/Documents/Code/Github_Repositories/PersonalWebsiteBackend/PersonalWebsiteBackend/PersonalWebsiteApp"
+      customWorkingDirectory = "/Users/cacarle/Google Drive/Documents/Code/Github_Repositories/PersonalWebsiteBackend/PersonalWebsiteBackend"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
