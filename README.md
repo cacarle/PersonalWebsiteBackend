@@ -107,7 +107,7 @@ I simply used the `inline#("html", as: raw)` to render some of the content separ
 
 If you just want to deploy one revision of your server to GCP Run and update it manually then steps 2-5 of this [Google Dev Codelab](https://codelabs.developers.google.com/codelabs/cloud-run-deploy/#0) are most of what's needed to get set up before pointing the service to your domain. This approach assumes that you have a GitHub repository that you can `git clone` to get the files into Cloud Shell. If you don't have one or are having trouble working with a private one, another way could be to install the GCP SDK on your computer and feed local files to GC Build or even setting up a bucket and uploading the files to that so you can access them in the GC Console (I haven't tried out these ways but it's what I would do if this didn't work).
 
-I chose to set up continuous deployment from GitHub when creating the service so that once the connected repository is updated it will trigger a new build process in the cloud and automatically deploy it. This can be done in a matter of minutes on the GCP web portal. Before doing this I created an organization with the website domain which in turn creates a new account that I set up with the email that I created for the domain. You also need to set up a Cloud Identity, activate billing (I used the their free $300 trial), and manage some permissions like so:
+I set up a build trigger so that every time I make a push to the repository it creates a build. This can be done in a matter of minutes on the GCP web portal. Before doing this I created an organization with the website domain which in turn creates a new account that I set up with the email that I created for the domain. You also need to set up a Cloud Identity, activate billing (I used the their free $300 trial), and manage some permissions like so:
 
 ![GCP Permissions](repository-sources/gcp_deploy_permissions.png)
 
@@ -139,16 +139,17 @@ Finally, for step 3 make sure that you allow all traffic and unauthenticated inv
 
 ![GCP Deploy Step 6](repository-sources/gcp_deploy_step6.png)
 
-Usually the last step in creating the service will fail because it tries to create inline instructions for building rather than just going straight to the Docker container. Click on "Edit Continuous Deployment" to fix this. 
+It will fail to build initially as it seems that the inline file that it crates needs modification. If you don't want to deal with this and just have builds get created and then you go in and deploy them manually (the half-lazy way). Once I figure out how to get that working properly I'll update this repo. For now, click on "Edit Continuous Deployment" and change the build configuration to `Dockerfile`. 
 
 ![GCP Deploy Step 7](repository-sources/gcp_deploy_step7.png)
 
-Also change the timeout settings to something longer because the default 10 minutes will not be enough.
+Also change the timeout settings to something longer because the default 10 minutes will not be enough. This build usually takes 19min on a 1 CPU build instance, so 25min is plenty (you're paying for it anyway).
 
 ![GCP Deploy Step 8](repository-sources/gcp_deploy_step8.png)
 
 Let's test it by pushing a commit to the repository to trigger the first build! 
 
+More details coming...
 
 ### Troubleshooting Tips
 
