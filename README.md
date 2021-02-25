@@ -141,7 +141,11 @@ Finally, for step 3 make sure that you allow all traffic and unauthenticated inv
 
 Usually the last step in creating the service will fail because it tries to create inline instructions for building rather than just going straight to the Docker container. Click on "Edit Continuous Deployment" to fix this. 
 
-![GCP Deploy Step 6](repository-sources/gcp_deploy_step7.png)
+![GCP Deploy Step 7](repository-sources/gcp_deploy_step7.png)
+
+Also change the timeout settings to something longer because the default 10 minutes will not be enough.
+
+![GCP Deploy Step 8](repository-sources/gcp_deploy_step8.png)
 
 Let's test it by pushing a commit to the repository to trigger the first build! 
 
