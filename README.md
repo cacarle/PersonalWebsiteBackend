@@ -139,7 +139,7 @@ Finally, for step 3 make sure that you allow all traffic and unauthenticated inv
 
 ![GCP Deploy Step 6](repository-sources/gcp_deploy_step6.png)
 
-It will fail to build initially as it seems that the inline file that it crates needs modification. If you don't want to deal with this and just have builds get created and then you go in and deploy them manually (the half-lazy way). Once I figure out how to get that working properly I'll update this repo. For now, click on "Edit Continuous Deployment" and change the build configuration to `Dockerfile`. 
+It will fail to build initially as it seems that the inline file that it crates needs modification. If you don't want to deal with this and just have builds get created and then you go in and deploy them manually (the half-lazy way) then just follow this next step. Once I figure out how to get that working properly I'll update this repo. For now, click on "Edit Continuous Deployment" and change the build configuration to `Dockerfile`. 
 
 ![GCP Deploy Step 7](repository-sources/gcp_deploy_step7.png)
 
